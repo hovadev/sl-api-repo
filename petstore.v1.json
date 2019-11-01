@@ -24,7 +24,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pet"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pet"
+                  }
                 }
               }
             }
@@ -34,6 +37,34 @@
         "operationId": "listPets"
       },
       "parameters": []
+    },
+    "/pet/{pet}": {
+      "parameters": [
+        {
+          "type": "string",
+          "name": "pet",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        },
+        "description": "Get details about a specific pet.",
+        "operationId": "getPet"
+      }
     }
   },
   "components": {
