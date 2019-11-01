@@ -3,9 +3,69 @@ info:
   title: cars
   version: '1.0'
   description: An awesome API for discovering cars
+  contact:
+    name: Avet
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+paths:
+  /cars:
+    get:
+      summary: List cars
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Car'
+      description: Get the list of cars
+      operationId: listCars
+    post:
+      summary: Create a car
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+      description: Create a car
+      operationId: createCar
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+        description: ''
+  '/cars/{car}':
+    parameters:
+      - type: string
+        name: car
+        in: path
+        required: true
+        description: Car identifier
+    get:
+      summary: Get a car
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+      description: Get detauls about a car
+      operationId: getCar
+    delete:
+      summary: Delete a car
+      responses:
+        '200':
+          description: OK
+      description: Delete a car
+      operationId: deleteCar
 components:
   schemas:
     Car:
