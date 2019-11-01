@@ -1,0 +1,58 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Petstore",
+    "version": "1.0",
+    "contact": {
+      "name": "Avet"
+    },
+    "description": "This is a demo petstore api"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/pets": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        },
+        "description": "List all pets",
+        "operationId": "listPets"
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": {
+        "title": "Pet",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}
