@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: cars
+  version: '1.0'
+  description: An awesome API for discovering cars
+servers:
+  - url: 'http://localhost:3000'
+paths: {}
+components:
+  schemas:
+    Car:
+      title: Car
+      type: object
+      properties:
+        id:
+          type: string
+        make:
+          type: string
+        model:
+          type: string
+        year:
+          type: integer
+        vin:
+          type: string
+      x-examples:
+        Mazda:
+          value:
+            make: Mazda
+            model: CX-9
+            year: 2011
+            vin: JTBTxxxxxxxx0102
