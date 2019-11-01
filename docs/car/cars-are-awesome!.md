@@ -30,6 +30,6 @@ My first car was an Opel. Not in a bad sense. It was a good one.
 
 
 
-Feature  | Opel | VW | BMW | Mercedes
----------|----------|---------|---
- Quality | Bad |  Medium | Good | Great
+| Feature  | Opel | VW | BMW    | Mercedes |
+| ---------|----------|---------|--- |
+| Quality | Bad |  Medium | Good | Great |
