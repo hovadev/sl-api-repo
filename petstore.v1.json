@@ -88,6 +88,18 @@
           }
         }
       }
+    }, 
+    "parameters": {
+    
+      "petParam": {
+        "title": "petParam",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
