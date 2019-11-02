@@ -1,0 +1,15 @@
+title: Address
+type: object
+properties:
+  id:
+    type: string
+  street_number:
+    type: number
+  street:
+    type: string
+  zip:
+    type: string
+  city:
+    type: string
+  state:
+    type: string

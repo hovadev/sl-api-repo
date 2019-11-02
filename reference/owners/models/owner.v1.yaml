@@ -1,0 +1,11 @@
+title: Owner
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  age:
+    type: integer
+  address:
+    $ref: ./address.v1.yaml

@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: owners
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /owners:
+    get:
+      summary: Get the list of registered owners
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../common/models/owner.v1.yaml
+      description: This endpoint allows to query the list of registered owners.
+    post:
+      summary: Register a new owner
+      tags: []
+      responses: {}
+  '/owners/{ownerid}':
+    parameters:
+      - type: string
+        name: ownerid
+        in: path
+        required: true
+    get:
+      summary: Get details about a specific owner
+      tags: []
+      responses: {}
+    put:
+      summary: Update an owner record
+      tags: []
+      responses: {}
+    delete:
+      summary: Delete an owner record
+      tags: []
+      responses: {}
+components:
+  schemas: {}
